@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>vision mission</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+			font-family: sans-serif;
+		}
+		 .logo{
+      height: 200px;
+      max-width: 100%;
+      background-color:#fcba03;
+      background-attachment: fixed;
+      background-position: fixed;
+    }
+    .time{
+      position: relative;
+      bottom: 100px;
+      left: 30px;
+      max-width: 200px;
+    }
+		.navbar{
+			text-align: center;
+			background-color: black;
+		}
+		.navbar ul{
+			display: inline-flex;
+			list-style: none;
+
+		}
+		.navbar ul li{
+			width: 120px;
+			margin: 15px;
+			padding: 15px;
+			border-right: 1px solid white ;
+		}
+		.navbar ul li a{
+			color: white;
+
+		}
+		.active, .navbar ul li:hover{
+			background: #fcba03;
+			border-radius: 3px;
+		}
+		.navbar .fa-solid{
+			margin-right: 8px;
+		}
+	
+		.subnav{
+			display: none;
+		}
+		.navbar ul li:hover .subnav{
+			display: block;
+			position: absolute;
+			background-color: #fcba03;
+			margin-top: 15px;
+			margin-left: -15px;
+
+		}
+		.navbar ul li:hover .subnav ul{
+			display: block;
+			margin: 10px;
+			
+
+		}
+		.navbar ul li:hover .subnav ul li{
+			width: 150px;
+			padding: 10px;
+			border-bottom: 1px dotted white;
+			border-right: none;
+			background: transparent;
+			border-radius: 2px;
+			text-align: left;
+		}
+		.navbar ul li:hover .subnav ul li:last-child{
+			border-bottom: none;
+		}
+		.navbar ul li:hover .subnav ul li a:hover{
+			color: black;
+		}
+		.body1{
+			margin: 0px 40px;
+			width: 50%;
+			float: left;
+
+		}
+
+		#img1{
+			height: 700px;
+			width: 500px;
+			box-shadow: 10px 0px 10px 10px;
+			margin-top: 30px;
+			margin-bottom: 20px;
+
+		}
+		 #icon2{
+			margin-left: 20px;
+			font-size: 35px;
+			color: white;
+			background-color: transparent;
+		}
+		 #icon :hover{
+		 	color:#fcba03;
+		 	background-color: transparent;
+
+		 }
+		
+		i{
+            font-family: fontawesome;
+            font-size: 15px;
+        }
+        h4{
+            color: black;
+            padding-top: 30px;
+        }
+        table{
+            width: 100%;
+            height: auto;
+            color: white;
+            background-color: black;
+            padding-bottom: 200px;
+            
+        }
+        td{
+        	width: 33.3%;
+        }
+        .end{
+            background-color: white;
+            width: 100%;
+            position: relative;
+            bottom: 80px;
+            border-radius: 20px;
+
+        }
+	
+
+
+
+
+
+		
+	</style>
+	<script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements    
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+
+// Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+<body>  
+	 <div class="logo">
+    <img style="padding-left: 400px; padding-top: 50px;" src="C:\Users\tsher\Desktop\Game Project\new-MoE-banner-2048x363 (1).png" height="100px;" width="500px;">
+    <div class="time">
+    <h3>Bhutan time now</h3>
+    <p style="border: 1px solid black; height: 30px; width: 130px; color: black; font-size: 20px; text-align: center;"><span id="time"></span></p>
+        <p style="padding-left: 15px;"><span id="date"></span></p>
+        
+        </div>
+    
+  </div>
+	<header>
+		
+	<div class="navbar">
+	<ul>
+		<li><i class="fa-solid fa-house-chimney" style="color: white;"></i><a href="home.html">Home</a></li>
+		<li class="active"><a href="#"><i class="fa-solid fa-address-card"></i>About</a>
+		<div class="subnav">
+			<ul>
+				<li><a style="color: black;" href="moeabb.html">Mission & Vision</a></li>
+				<li><a href="initiatives.html">Initiatives</a></li>
+			</ul>
+		</div>
+	</li>
+
+		<li><a href="history.html"><i class="fa-solid fa-landmark"></i>History</a>
+		<li><a href="contact.html"><i class="fa-solid fa-address-book"></i>Contact Us</a></li>
+		<li><a href="news.html"><i class="fa-solid fa-newspaper"></i>News</a></li>
+	</ul>
+	</div>
+	</header>
+	<center><h1>Mission & Vision</h1></center>
+
+	<div class="body1">
+
+		<h2>VISION</h2><hr><br>
+	<p1>An educated and enlightened society of GNH, built and sustained on the unique Bhutanese values of tha dam-tsig ley gju-drey.</p1><br><br>
+	<h2>MISSION</h2><hr><br>
+	<ul>
+	<p1><li>Develop sound educational policies that enable the creation of a knowledge-based GNH society.</li><br>
+		<li>Provide equitable, inclusive and quality education and lifelong learning opportunities to all children and harness their full potential to become productive citizens.</li><br>
+	     <li>Equip all children with appropriate knowledge, skills and values to cope with the challenges of the 21st century.</li>
+    </p1>
+</ul>
+<br><br>
+    <h2>OBJECTIVES</h2><hr><br>
+    <p1>
+    	The Ministry of Education presently is focused on achieving the following Objectives:<br><br>
+    	<ul>
+
+<li>To improve relevance and quality of education</li><br>
+<li>To improve access to and sustainability of education</li><br>
+<li>To strengthen youth development programme and services</li><br>
+<li>To enhance adult literacy and lifelong learning</li><br>
+<li>To ensure full utilization of budget</li><br>
+<li>To enable effective and efficient ICT Service delivery.</li><br>
+</ul>
+    </p1>
+</div>
+<img id="img1" src="C:\Users\tsher\Desktop\Game Project\Message-from-the-Honble-Lyonpo-on-Teachers-Day.jpg">
+    
+    	
+    <footer>
+  <table>
+      <tr>
+          <th style="font-size: 18px;">About</th><hr>
+          <th style="font-size: 18px;">Follow us</th>
+          <th style="font-size: 18px;">Contact us</th>
+          
+      </tr>
+      <tr>
+          <td style="font-size: 12px; padding-left: 10px;">The Ministry of Education under the Royal Government of Bhutan is responsible for formulating sound educational policies leading towards a knowledge-based GNH society.
+          Jurisdiction    Government of Bhutan<br><br>
+        Headquarters    Peling Lam, Thimphu, Bhutan<br><br>
+        Ministry executive    <br><br>
+        Jai Bir Rai<br><br>
+        Parent Ministry    <br><br>
+        Royal Education Council<br><br>
+        Bhutan Council for School Examinations & Assessment
+          </td>
+          <td>
+          	<p3 id="icon">
+              <a href="https://www.youtube.com/@EducationBhutan9900"><i id="icon2" class="fa-brands fa-youtube"></a></i>
+              <a href="https://www.facebook.com/SherigBhutan"><i id="icon2" class="fa-brands fa-facebook"></a></i>
+              <a href="https://twitter.com/sherig_skills"><i id="icon2" class="fa-brands fa-twitter"></a></i>
+              <a href="https://www.instagram.com/sherig_skills.ministry/"><i id="icon2" class="fa-brands fa-instagram"></a></i></p3>
+          </td>
+
+
+
+
+
+
+          <td style="padding-right: 50px;">    
+         <p>Toll Free # 9900</p><br><br>
+         <p>website: www.education.gov.bt</p><br><br>
+          </td>
+      </tr>
+  </table>
+  <div class="end">
+      <p style="color:black; text-align: center;">Copyright © 2023 | Ministry of Education | webmaster@education.gov.bt</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

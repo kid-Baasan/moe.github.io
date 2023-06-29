@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>initiatives</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			max-width: 100%;
+			text-decoration: none;
+			font-family: sans-serif;
+
+		}
+		 .logo{
+      height: 200px;
+      max-width: 100%;
+      background-color:#fcba03;
+      background-attachment: fixed;
+      background-position: fixed;
+    }
+    .time{
+      position: relative;
+      bottom: 100px;
+      left: 30px;
+      max-width: 200px;
+    }
+		.navbar{
+
+			margin: -4px;
+			text-align: center;
+			background-color: black;
+		}
+		.navbar ul{
+			display: inline-flex;
+			list-style: none;
+
+		}
+		.navbar ul li{
+			width: 120px;
+			margin: 15px;
+			padding: 15px;
+			border-right: 1px solid white ;
+		}
+		.navbar ul li a{
+			color: white;
+
+		}
+		.active, .navbar ul li:hover{
+
+			background: #fcba03;
+			border-radius: 3px;
+		}
+		.navbar .fa-solid{
+			margin-right: 8px;
+		}
+	
+		.subnav{
+			display: none;
+		}
+		.navbar ul li:hover .subnav{
+			display: block;
+			position: absolute;
+			background-color:#fcba03;
+			margin-top: 15px;
+			margin-left: -15px;
+
+		}
+		.navbar ul li:hover .subnav ul{
+			display: block;
+			margin: 10px;
+			
+
+		}
+		.navbar ul li:hover .subnav ul li{
+
+			width: 150px;
+			padding: 10px;
+			border-bottom: 1px dotted white;
+			border-right: none;
+			background: transparent;
+			border-radius: 2px;
+			text-align: left;
+		}
+		.navbar ul li:hover .subnav ul li:last-child{
+			border-bottom: none;
+		}
+		.navbar ul li:hover .subnav ul li a:hover{
+			color: black;
+		}
+		
+		#imgnews{
+
+			height: 200px;
+			width: 200px;
+			margin: 20px;
+			border: 2px solid black;
+			border-radius: 15px;
+		}
+		 
+
+
+
+
+
+
+
+
+		#icon2{
+			margin-left: 20px;
+			font-size: 35px;
+			color: white;
+			background-color: transparent;
+		}
+		 #icon :hover{
+		 	color:#fcba03;
+		 	background-color: transparent;
+
+		 }
+		
+		i{
+            font-family: fontawesome;
+            font-size: 15px;
+        }
+        h4{
+            color: black;
+            padding-top: 30px;
+        }
+        table{
+            width: 100%;
+            height: auto;
+            color: white;
+            background-color: black;
+            padding-bottom: 200px;
+            
+        }
+        td{
+        	width: 33.3%;
+        }
+        .end{
+            background-color: white;
+            width: 100%;
+            position: relative;
+            bottom: 80px;
+            border-radius: 20px;
+
+        }
+      
+        }
+        #kezang{
+        	
+        	margin: 100px 40px;
+        	border: 1px solid black;
+        	border-radius: 10px;
+        	box-shadow: 0px 0px 0px black;
+        	transition: all 0.9s ease;
+
+        }
+        #kezang:hover{
+        	box-shadow: 8px 4px 2px black;
+        	transform: scale(1.1);
+
+        }
+        
+        
+   
+        .allnews{
+        	
+        	width: 100%;
+        	display: flex;
+        	height: 240px;
+
+        }
+       
+
+
+		</style>
+		<script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements    
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+
+// Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+<body>
+	<header>
+		<div class="logo">
+    <img style="padding-left: 400px; padding-top: 50px;" src="C:\Users\tsher\Desktop\Game Project\new-MoE-banner-2048x363 (1).png" height="100px;" width="500px;">
+    <div class="time">
+    <h3>Bhutan time now</h3>
+    <p style="border: 1px solid black; height: 30px; width: 130px; color: black; font-size: 20px; text-align: center;"><span id="time"></span></p>
+        <p style="padding-left: 15px;"><span id="date"></span></p>
+        
+        </div>
+    
+  </div>
+	<div class="navbar">
+	<ul>
+		<li><i class="fa-solid fa-house-chimney" style="color: white;"></i><a href="home.html">Home</a></li>
+		<li><a href="#"><i class="fa-solid fa-address-card"></i>About</a>
+		<div class="subnav">
+			<ul>
+				<li><a href="moeabb.html">Mission & Vision</a></li>
+				<li><a href="initiatives.html">Initiatives</a></li>
+			</ul>
+		</div>
+	</li>
+
+		<li><a href="history.html"><i class="fa-solid fa-landmark"></i>History</a>
+		<li><a href="contact.html"><i class="fa-solid fa-address-book"></i>Contact Us</a></li>
+		<li class="active"><a href="news.html"><i class="fa-solid fa-newspaper"></i>News</a></li>
+	</ul>
+	</div>
+	</header>
+	<div class="body">
+	<center><h1>N e w s</h1></center>
+
+	<div class="allnews">
+
+		<a id="textdown"  href="https://kuenselonline.com/bhutans-education-system-in-great-peril/"><img id="imgnews" src="https://kuenselonline.com/wp-content/uploads/2023/05/unnamed-1.jpg"></a>
+
+		<a id="textdown" href="https://www.unicef.org/bhutan/stories/online-learning-was-exciting-more-challenging"><img id="imgnews" src="https://www.unicef.org/bhutan/sites/unicef.org.bhutan/files/styles/hero_extended/public/IMG_1961.jpg?itok=DGNvmHFK"></a>
+
+		<a id="textdown"  href="https://bhutantimes.bt/index.php/2023/06/19/bhutan-qualifications-framework-launched/"><img id="imgnews" src="https://bhutantimes.bt/wp-content/uploads/2023/06/page-1-seondary-1536x961.jpg"></a>
+
+		<a id="textdown"  href="https://www.mfa.gov.bt/rbecanberra/guidelines-for-bhutanese-students-wishing-to-study-in-australia/"><img id="imgnews" src="https://static.vecteezy.com/system/resources/previews/004/606/007/original/flight-and-travel-from-australia-to-bhutan-by-passenger-airplane-travel-concept-vector.jpg"></a>
+
+   <a href="https://kuenselonline.com/bhutan-and-australia-strengthen-bilateral-relations-at-6th-annual-consultations/"><img id="imgnews" src="https://kuenselonline.com/wp-content/uploads/2023/05/Bhutan-and-Australia.jpg"></a><br>
+ </div>
+
+<div class="allnews">
+   <a id="textdown"  href="https://writeups24.com/india-to-provide-quality-education-to-bhutanese-students-claims-reports/"><img id="imgnews" src="https://i0.wp.com/writeups24.com/wp-content/uploads/2023/03/Educationimg12.jpg?w=1024&ssl=1"></a>
+
+   <a id="textdown"  href="https://www.livemint.com/news/india/india-woos-bhutanese-students-youth-11680895011874.html"><img id="imgnews" src="https://www.livemint.com/lm-img/img/2023/04/07/600x338/Education_1680895088169_1680895094746_1680895094746.jpg"></a>
+
+   <a id="textdown"  href="https://buddhistdoor.net/news/bhutan-nuns-foundation-shares-updates-on-bnf-training-resource-centre-for-buddhist-nuns/"><img id="imgnews" src="https://www.buddhistdoor.net/content/uploads/2023/01/004.jpeg"></a>
+
+   <a id="textdown"  href="https://www.aninews.in/news/world/asia/foreign-universities-coming-to-india-a-boon-for-bhutanese-students20230228023713/"><img id="imgnews" src="https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20230227210700.jpg"></a>
+
+   <a id="textdown"  href="https://kuenselonline.com/teachers-shortage-means-more-than-gap-in-education/"><img id="imgnews" src="https://kuenselonline.com/wp-content/uploads/2022/09/editorialsept9.jpg"></a>
+
+	</div>
+
+
+
+	<footer>
+  <table>
+      <tr>
+          <th style="font-size: 18px;">About</th><hr>
+          <th style="font-size: 18px;">Follow us</th>
+          <th style="font-size: 18px;">Contact us</th>
+          
+      </tr>
+      <tr>
+          <td style="font-size: 12px; padding-left: 10px;">The Ministry of Education under the Royal Government of Bhutan is responsible for formulating sound educational policies leading towards a knowledge-based GNH society.
+          Jurisdiction    Government of Bhutan<br><br>
+        Headquarters    Peling Lam, Thimphu, Bhutan<br><br>
+        Ministry executive    <br><br>
+        Jai Bir Rai<br><br>
+        Parent Ministry    <br><br>
+        Royal Education Council<br><br>
+        Bhutan Council for School Examinations & Assessment
+          </td>
+          <td>
+          	<p3 id="icon">
+              <a href="https://www.youtube.com/@EducationBhutan9900"><i id="icon2" class="fa-brands fa-youtube"></a></i>
+              <a href="https://www.facebook.com/SherigBhutan"><i id="icon2" class="fa-brands fa-facebook"></a></i>
+              <a href="https://twitter.com/sherig_skills"><i id="icon2" class="fa-brands fa-twitter"></a></i>
+              <a href="https://www.instagram.com/sherig_skills.ministry/"><i id="icon2" class="fa-brands fa-instagram"></a></i></p3>
+          </td>
+
+
+
+
+
+
+          <td style="padding-right: 50px;">    
+         <p>Toll Free # 9900</p><br><br>
+         <p>website: www.education.gov.bt</p><br><br>
+          </td>
+      </tr>
+  </table>
+  <div class="end">
+      <p style="color:black; text-align: center;">Copyright © 2023 | Ministry of Education | webmaster@education.gov.bt</p>
+  </div>
+</footer>
+
+	
+
+</body>
+</html>

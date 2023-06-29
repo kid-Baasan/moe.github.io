@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style type="text/css">
+  
+    *{
+      text-decoration: none;
+      max-width: 100%;
+      font-family: sans-serif;
+
+    }
+    .logo{
+      height: 200px;
+      max-width: 100%;
+      background-color:#fcba03;
+      background-attachment: fixed;
+      background-position: fixed;
+    }
+    .time{
+      position: relative;
+      bottom: 100px;
+      left: 30px;
+      max-width: 200px;
+    }
+    .navbar{
+            text-align: center;
+            background-color: black;
+        }
+        .navbar ul{
+            display: inline-flex;
+            list-style: none;
+
+        }
+        .navbar ul li{
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+            border-right: 1px solid white ;
+        }
+        .navbar ul li a{
+            color: white;
+
+        }
+        .active, .navbar ul li:hover{
+            background:#fcba03;
+            border-radius: 3px;
+        }
+        .navbar .fa-solid{
+            margin-right: 8px;
+            color: white;
+        }
+    
+        .subnav{
+            display: none;
+        }
+        .navbar ul li:hover .subnav{
+            display: block;
+            position: absolute;
+            background-color: #fcba03;
+            margin-top: 15px;
+            margin-left: -15px;
+
+        }
+        .navbar ul li:hover .subnav ul{
+            display: block;
+            margin: 10px;
+            
+
+        }
+        .navbar ul li:hover .subnav ul li{
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted white;
+            border-right: none;
+            background: transparent;
+            border-radius: 2px;
+            text-align: left;
+        }
+        .navbar ul li:hover .subnav ul li:last-child{
+            border-bottom: none;
+        }
+        .navbar ul li:hover .subnav ul li a:hover{
+            color: black;
+        }
+        .History{
+          background-color: white;
+          width: 1000px;
+          height: auto;
+          border-radius: 40px;
+          position: relative;
+          left: 150px;
+          z-index: -1;
+        }
+        .button{
+          background-color: blue;
+          color: white;
+          cursor: pointer;
+        }
+        .pdf{
+          position: relative;
+          bottom: 350px;
+          left: 200px;
+          cursor: pointer;
+            background-color: #fcba03;
+          color: black;
+        }
+        #icon2{
+            margin-left: 20px;
+            font-size: 35px;
+            color: white;
+            background-color: transparent;
+        }
+         #icon :hover{
+            color:#fcba03;
+            background-color: transparent;
+
+         }
+        
+        i{
+            font-family: fontawesome;
+            font-size: 15px;
+        }
+        h4{
+            color: black;
+            padding-top: 30px;
+        }
+        table{
+            width: 100%;
+            height: auto;
+            color: white;
+            background-color: black;
+            padding-bottom: 200px;
+            
+        }
+        td{
+            width: 33.3%;
+        }
+        .end{
+            background-color: white;
+            width: 100%;
+            position: relative;
+            bottom: 80px;
+            border-radius: 20px;
+
+        }
+        .body2{
+            clear: both;
+        }
+        #kezang{
+            
+            margin: 100px 40px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px black;
+            transition: all 0.9s ease;
+
+        }
+        #kezang:hover{
+            box-shadow: 8px 4px 2px black;
+            transform: scale(1.1);
+
+        }
+       
+        
+  </style>
+  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements    
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+
+// Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+<body>
+  <div class="logo">
+    <img style="padding-left: 400px; padding-top: 50px;" src="C:\Users\tsher\Desktop\Game Project\new-MoE-banner-2048x363 (1).png" height="100px;" width="500px;">
+    <div class="time">
+    <h3>Bhutan time now</h3>
+    <p style="border: 1px solid black; height: 30px; width: 130px; color: black; font-size: 20px; text-align: center;"><span id="time"></span></p>
+        <p style="padding-left: 15px;"><span id="date"></span></p>
+        
+        </div>
+    
+  </div>
+  <header>
+    <div class="navbar">
+     <ul>
+        <li><i class="fa-solid fa-house-chimney" style="color: white;"></i><a href="home.html">Home</a></li>
+        <li><a href="#"><i class="fa-solid fa-address-card"></i>About</a>
+        <div class="subnav">
+            <ul>
+                <li><a href="moeabb.html">Mission & Vision</a></li>
+                <li><a href="initiatives.html">Initiatives</a></li>
+            </ul>
+        </div>
+    </li>
+
+        <li class="active"><a href="history.html"><i class="fa-solid fa-landmark"></i>History</a>
+        <li><a href="contact.html"><i class="fa-solid fa-address-book"></i>Contact Us</a></li>
+        <li><a href="news.html"><i class="fa-solid fa-newspaper"></i>News</a></li>
+    </ul>
+    </div>
+    </header>
+    <div class="History">
+      <h1 style="text-align: center; color: black;">HISTORY OF BHUTAN EDUCATION</h1>
+      <p style="text-align: center; font-size: 20px;">Modern education in Bhutan began as early as 1907, with records revealing how the first king of Bhutan ordered his chamberlain to contact two educationists[1], who sent over two teachers to start the first modern school at Haa in 1914. It proved difficult in the beginning to convince the public to send their children to school, with reference to accounts of parents hiding their children in barns or attics to keep them from getting enrolled. Prior to modern education, monastic education was the only form of learning, and it was considered a matter of pride and status in society to have a family member in a monastic institution.
+
+The modern formal education system has since flourished in the country; it started off with an Indian curriculum that evolved in the 1980s to a contextualized curriculum with its own examination board, national teaching force and a university, the Royal University of Bhutan, which was established in 2003.  As of 2021, there are 605 schools with 168324 students that employ 9902 teachers[2] with an education expenditure that amounts to 5.33% of the country’s GDP in 2018/ 19[3].  The medium of instruction in school is English, resulting in most of Bhutan’s literate youth being fluent and conversant in the language. The Bhutanese education system now takes three forms: a general formal education, monastic education and non-formal education, with the first being predominant.</p>
+<p style="text-align: center; font-size: 20px;">With a general literacy rate of 71.4%[5], the modern form of education has been accepted as a great equalizer, responsible for lifting less advantaged sections of society out of poverty and improving their chances for success in adulthood. However, the current education system has also been the subject of scrutiny for failing to equip citizens for the 21st century; youth need adaptable competencies to thrive in newer dynamic job markets. The current school curricula do not emphasize skills-based training and focus little on developing critical thinking, innovation, creativity, communication and leadership skills, leaving many stranded and undesirable for jobs in the private and corporate sectors, which are the two main sources of employment outside the public sector.</p>
+
+
+<h1 style="text-align:center;">VISION</h1>
+<P style="text-align: center;">An educated and enlightened society of GNH, built and sustained on the unique Bhutanese values of tha dam-tsig ley gju-drey.</P>
+<h1 style="padding-left: 50px;">Departments</h1>
+<p style="padding-left: 50px;">The Ministry of Education is responsible for:</p>
+  <li style="padding-left: 50px;">Department of Adult and Higher Education</li>
+  <li style="padding-left: 50px;">Department of School Education</li>
+  <li style="padding-left: 50px;">Department of Youth, Culture and Sports</li>
+  <li style="padding-left: 50px;">Dzongkha Development Commission</li>  
+
+<h1 style="padding-left: 700px; position: relative; bottom: 190px;">Priorities</h1>  
+<p style="padding-left: 580px; position: relative; bottom: 190px;">The Ministry of Education is presently focused on achieving the following objectives:</p>
+    <li style="padding-left: 580px; position: relative; bottom: 190px;">To improve relevance and quality of education</li>
+    <li style="padding-left: 580px; position: relative; bottom: 190px;">To improve access to and sustainability of education</li>
+    <li style="padding-left: 580px; position: relative; bottom: 190px;">To strengthen youth development programme and services</li>
+    <li style="padding-left: 580px; position: relative; bottom: 190px;">To enhance adult literacy and lifelong learning</li>
+    <li style="padding-left: 580px; position: relative; bottom: 190px;">To ensure full utilization of budget</li>
+    <li style="padding-left: 580px; position: relative; bottom: 190px;">To enable effective and efficient ICT Service delivery</li>
+    <h1 style="padding-left: 50px; position: relative; bottom: 150px;">Minister</h1>
+    <li style="padding-left: 50px; position: relative; bottom: 150px;">Sangay Ngedup (1998–1999 as Minister of Health and Education)</li>
+    <li style="padding-left: 50px; position: relative; bottom: 150px;">Thakur S. Powdyel (2008–2013)</li>
+    <li style="padding-left: 50px; position: relative; bottom: 150px;">Norbu Wangchuk (2016–2018)</li>
+    <li style="padding-left: 50px; position: relative; bottom: 150px;">Jai Bir Rai (7 November 2018 – present as Minister of Education)</li>
+    <img style="border-radius: 20px; position:relative; left: 650px; bottom: 250px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Bhutan_primary_school.jpg/1280px-Bhutan_primary_school.jpg" height="300px;" width="300px;">
+    <p style="padding-left: 700px; position: relative; bottom: 250px;">A primary school in Paro, Bhutan</p>
+
+
+<p style="padding-left: 50px; position: relative; bottom:400px;">In bhutanese education system they learn subjects like:</p>
+        <li style="padding-left: 50px; position: relative; bottom:400px;">English</li>
+      <li style="padding-left: 50px; position: relative; bottom:400px;">Dzongkha</li>
+      <li style="padding-left: 50px; position: relative; bottom:400px;">History</li>
+      <li style="padding-left: 50px; position: relative; bottom:400px;">Geography</li>
+      <li style="padding-left: 50px; position: relative; bottom:400px;">Science</li>
+      <li style="padding-left: 50px; position: relative; bottom:400px;">Mathematics</li>
+      <p style="padding-left: 50px; position: relative; bottom:400px;">But the core curriculum set by the National Board of Secondary Education included English, mathematics, and Dzongkha.</p> 
+    </div>
+    <a style="padding-left: 900px; position:relative; bottom: 400px; color: black;" href="https://factsanddetails.com/south-asia/Bhutan/Education_Health_Transportation_Infrastructure_Bhutan/entry-7925.html#chapter-2"><button>Learn More</button></a>
+    <h1 style="padding-left: 200px; position:relative; bottom: 350px;">FILES</h1>
+      <a href="https://www.researchgate.net/publication/344457581_School_Education_in_Bhutan_Policy_Current_Status_and_Challenges"><button class="pdf">PDF</button></a>
+      <a href="https://www.pce.edu.bt/wp-content/uploads/2019/07/Quality-of-Education-II.pdf"><button class="pdf">PDF</button></a>
+      <a href="https://files.eric.ed.gov/fulltext/ED568679.pdf"><button class="pdf">PDF</button></a>
+      <footer>
+  <table>
+      <tr>
+          <th style="font-size: 18px;">About</th><hr>
+          <th style="font-size: 18px;">Follow us</th>
+          <th style="font-size: 18px;">Contact us</th>
+          
+      </tr>
+      <tr>
+          <td style="font-size: 12px; padding-left: 10px;">The Ministry of Education under the Royal Government of Bhutan is responsible for formulating sound educational policies leading towards a knowledge-based GNH society.
+          Jurisdiction    Government of Bhutan<br><br>
+        Headquarters    Peling Lam, Thimphu, Bhutan<br><br>
+        Ministry executive    <br><br>
+        Jai Bir Rai<br><br>
+        Parent Ministry    <br><br>
+        Royal Education Council<br><br>
+        Bhutan Council for School Examinations & Assessment
+          </td>
+          <td>
+            <p3 id="icon">
+              <a href="https://www.youtube.com/@EducationBhutan9900"><i id="icon2" class="fa-brands fa-youtube"></a></i>
+              <a href="https://www.facebook.com/SherigBhutan"><i id="icon2" class="fa-brands fa-facebook"></a></i>
+              <a href="https://twitter.com/sherig_skills"><i id="icon2" class="fa-brands fa-twitter"></a></i>
+              <a href="https://www.instagram.com/sherig_skills.ministry/"><i id="icon2" class="fa-brands fa-instagram"></a></i></p3>
+          </td>
+
+
+
+
+
+
+          <td style="padding-right: 50px;">    
+         <p>Toll Free # 9900</p><br><br>
+         <p>website: www.education.gov.bt</p><br><br>
+          </td>
+      </tr>
+  </table>
+  <div class="end">
+      <p style="color:black; text-align: center;">Copyright © 2023 | Ministry of Education | webmaster@education.gov.bt</p>
+  </div>
+</footer>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style type="text/css">
+    
+    *{
+      text-decoration: none;
+
+    }
+    .logo{
+      height: 200px;
+      max-width: 100%;
+      background-color:#fcba03;
+      background-attachment: fixed;
+      background-position: fixed;
+    }
+    .time{
+      position: relative;
+      bottom: 100px;
+      left: 30px;
+      max-width: 200px;
+    }
+    .navbar{
+            text-align: center;
+            background-color: black;
+        }
+        .navbar ul{
+            display: inline-flex;
+            list-style: none;
+
+        }
+        .navbar ul li{
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+            border-right: 1px solid white ;
+        }
+        .navbar ul li a{
+            color: white;
+
+        }
+        .active, .navbar ul li:hover{
+            background: #fcba03;
+            border-radius: 3px;
+        }
+        .navbar .fa-solid{
+            margin-right: 8px;
+            color: white;
+        }
+    
+        .subnav{
+            display: none;
+        }
+        .navbar ul li:hover .subnav{
+            display: block;
+            position: absolute;
+            background-color: #fcba03;
+            margin-top: 15px;
+            margin-left: -15px;
+
+        }
+        .navbar ul li:hover .subnav ul{
+            display: block;
+            margin: 10px;
+            
+
+        }
+        .navbar ul li:hover .subnav ul li{
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted white;
+            border-right: none;
+            background: transparent;
+            border-radius: 2px;
+            text-align: left;
+        }
+        .navbar ul li:hover .subnav ul li:last-child{
+            border-bottom: none;
+        }
+        .navbar ul li:hover .subnav ul li a:hover{
+            color: black;
+        }
+        img{
+          margin-left: 5px;
+          border-radius: 30px;
+          padding-top: 20px;
+
+
+}
+        form {
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+           height: 500px;
+           background-color: lightskyblue;
+           border-radius: 10px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+           
+         }
+         input[type=text], select, textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         resize: vertical;
+         position: relative;
+         top: 100px;
+        }
+        input[type=email]{
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         resize: vertical;
+         position: relative;
+         top: 100px;
+         
+        }
+       input[type=name]{
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         resize: vertical;
+         position: relative;
+         top: 100px;
+        }
+       input[type=submit] {
+         color: black;
+         background-color: lightskyblue;
+         padding: 12px 20px;
+         border: 1px solid white;
+         border-radius: 4px;
+         cursor: pointer;
+         position: relative;
+         left: 340px;
+         text-align: center;
+         position: relative;
+         top: 100px;
+        }
+        input[type=submit]:hover {
+          color: red;
+          cursor: pointer;
+        }
+        #icon2{
+      margin-left: 20px;
+      font-size: 35px;
+      color: white;
+      background-color: transparent;
+    }
+     #icon :hover{
+      color:#fcba03;
+      background-color: transparent;
+
+     }
+    
+    i{
+            font-family: fontawesome;
+            font-size: 15px;
+        }
+        h4{
+            color: black;
+            padding-top: 30px;
+        }
+        table{
+            width: 100%;
+            height: auto;
+            color: white;
+            background-color: black;
+            padding-bottom: 200px;
+            
+        }
+        td{
+          width: 33.3%;
+        }
+        .end{
+            background-color: white;
+            width: 100%;
+            position: relative;
+            bottom: 80px;
+            border-radius: 20px;
+
+        }
+        .body2{
+          clear: both;
+        }
+        #kezang{
+          
+          margin: 100px 40px;
+          border: 1px solid black;
+          border-radius: 10px;
+          box-shadow: 0px 0px 0px black;
+          transition: all 0.9s ease;
+
+        }
+        #kezang:hover{
+          box-shadow: 8px 4px 2px black;
+          transform: scale(1.1);
+
+        }
+    #img1{
+      border: 1px solid black;
+      box-shadow: 0px 0px 10px;
+    }
+
+
+
+  </style>
+  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements    
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+<body>
+  <div class="logo">
+    <img style="padding-left: 400px; padding-top: 50px;" src="C:\Users\tsher\Desktop\Game Project\new-MoE-banner-2048x363 (1).png" height="100px;" width="500px;">
+    <div class="time">
+    <h3>Bhutan time now</h3>
+    <p style="border: 1px solid black; height: 30px; width: 130px; color: black; font-size: 20px; text-align: center;"><span id="time"></span></p>
+        <p style="padding-left: 15px;"><span id="date"></span></p>
+        
+        </div>
+    
+  </div>
+  <header>
+    <div class="navbar">
+   <ul>
+    <li><i class="fa-solid fa-house-chimney" style="color: white;"></i>
+      <a href="home.html">Home</a></li>
+    <li><a href="#"><i class="fa-solid fa-address-card"></i>About</a>
+    <div class="subnav">
+      <ul>
+        <li><a href="moeabb.html">Mission & Vision</a></li>
+        <li><a href="initiatives.html">Initiatives</a></li>
+      </ul>
+    </div>
+  </li>
+
+    <li><a href="history.html"><i class="fa-solid fa-landmark"></i>History</a>
+    <li class="active"><a href="contact.html"><i class="fa-solid fa-address-book"></i>Contact Us</a></li>
+    <li><a href="news.html"><i class="fa-solid fa-newspaper"></i>News</a></li>
+  </ul>
+    </div>
+    </header>
+<div class="box">
+  <img id="img1" src="C:\Users\tsher\Desktop\Game Project\photo_2023-06-12_01-39-12.jpg" height="300px" width="300px">
+  <img id="img1"  src="C:\Users\tsher\Desktop\Game Project\photo_2023-06-12_01-39-17.jpg" height="300px" width="300px">
+  <img id="img1" src="C:\Users\tsher\Desktop\Game Project\photo_2023-06-12_01-39-18.jpg" height="300px" width="300px">
+  <img  id="img1"  src="C:\Users\tsher\Desktop\Game Project\photo_2023-06-12_01-39-20.jpg" height="300px" width="300px">
+  
+</div>
+
+  <form style="box-shadow: 0px 0px 10px;" method="GET">
+  <center><h1 style="color:darkblue;">Contact us</h1></center>
+<label for="name"></label>
+<input type="text" id="name" name="name" placeholder="Your first name.." required>
+<br>
+<br>
+
+<label for="email"></label>
+<input type="email" id="email" name="email" placeholder="Your email.." required><br>
+<br>
+<br>
+
+<label for="name"></label>
+<input type="name" id="name" name="name" placeholder="Feedback...." required>
+<br>
+<br>
+        
+ <br>
+ <br>
+ <input type="SUBMIT" value="SUBMIT"><br><br>
+</form>
+<footer>
+  <table>
+      <tr>
+          <th style="font-size: 18px;">About</th><hr>
+          <th style="font-size: 18px;">Follow us</th>
+          <th style="font-size: 18px;">Contact us</th>
+          
+      </tr>
+      <tr>
+          <td style="font-size: 12px; padding-left: 10px;">The Ministry of Education under the Royal Government of Bhutan is responsible for formulating sound educational policies leading towards a knowledge-based GNH society.
+          Jurisdiction    Government of Bhutan<br><br>
+        Headquarters    Peling Lam, Thimphu, Bhutan<br><br>
+        Ministry executive    <br><br>
+        Jai Bir Rai<br><br>
+        Parent Ministry    <br><br>
+        Royal Education Council<br><br>
+        Bhutan Council for School Examinations & Assessment
+          </td>
+          <td>
+            <p3 id="icon">
+              <a href="https://www.youtube.com/@EducationBhutan9900"><i id="icon2" class="fa-brands fa-youtube"></a></i>
+              <a href="https://www.facebook.com/SherigBhutan"><i id="icon2" class="fa-brands fa-facebook"></a></i>
+              <a href="https://twitter.com/sherig_skills"><i id="icon2" class="fa-brands fa-twitter"></a></i>
+              <a href="https://www.instagram.com/sherig_skills.ministry/"><i id="icon2" class="fa-brands fa-instagram"></a></i></p3>
+          </td>
+
+
+
+
+
+
+          <td style="padding-right: 50px;">    
+         <p>Toll Free # 9900</p><br><br>
+         <p>website: www.education.gov.bt</p><br><br>
+          </td>
+      </tr>
+  </table>
+  <div class="end">
+      <p style="color:black; text-align: center;">Copyright © 2023 | Ministry of Education | webmaster@education.gov.bt</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
